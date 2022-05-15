@@ -1,5 +1,19 @@
 "use strict";
+const root = document.querySelector(".root");
 
+function div(...classes) {
+  const elem = document.querySelector("div");
+  classes.forEach((classItem) => {
+    elem.classList.add(classItem);
+  });
+  root.append(elem);
+}
+div("width", "height", "bg");
+//
+//
+//
+//
+//
 // // rest operator massivdagi malumotni itemga chiqarib beradi
 // function mySkills(lang, cms, ...rest) {
 //   console.log(lang, cms, rest);
@@ -17,13 +31,3 @@
 //   console.log(a + b);
 // }
 // calc(1);
-const root = document.querySelector(".root");
-
-function div(...classes) {
-  const elem = document.querySelector("div");
-  classes.forEach((classItem) => {
-    elem.classList.add(classItem);
-    root.append(elem);
-  });
-}
-div("width", "height", "bg");
